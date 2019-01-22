@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<title>Home</title>
+	</head>
+	<body>
+		<form action="/show" method="post">
+			<table>
+				<tr>
+					<td>
+						<h1 class="display-4">Your Name:</h1>
+					</td>
+					<td>
+						<p class="text-monospace display-4"><%= name%></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h1 class="display-4">Dojo Location:</h1>
+					</td>
+					<td>
+						<p class="text-monospace display-4"><%= Location%></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h1 class="display-4">Favorite Language:</h1>
+					</td>
+					<td>
+						<p class="text-monospace display-4"><%= Language%></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h1 class="display-4">Comment:</h1>
+					</td>
+					<td>
+						<p class="text-monospace display-4"><%= comment%></p>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<form action="/" method="get">
+			<input type="submit" name="back" value="Go Back">
+		</form>
+	</body>
+</html>

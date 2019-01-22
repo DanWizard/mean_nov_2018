@@ -1,0 +1,10 @@
+var tasks_controller = require('../controllers/controllers');
+
+module.exports = function(app) {
+  app.get('/tasks', tasks_controller.tasks);
+  app.get('/tasks/:id', tasks_controller.task_id);
+  app.post('/tasks', tasks_controller.new);
+  app.put('/tasks/:id', tasks_controller.task_update_id);
+  app.delete('/tasks/:id', tasks_controller.delete);
+  app.post('/new', tasks_controller.createTask)
+}

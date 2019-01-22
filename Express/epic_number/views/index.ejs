@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<title>The Great Button Game</title>
+				<script type ="text/javascript">
+			        $(document).ready(function (){
+			        	var socket = io();	
+			        	$('#add').click(function(){
+			        		socket.emit('add_on_server' )
+			        	})
+			        	$('#reset').click(function(){
+			        		console.log('yo')
+			        		socket.emit('reset_on_server')
+			        	})
+			        	socket.on('re', function(data){
+			        		$('#replace').html(`<h2 id='replace' class="display-2">This Button has been pushed ${data}</h2>`)
+			        	})
+
+			        })
+	    	</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h2 id='replace' class="display-2">This Button has been pushed</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<h2  class="display-4">Push the Button to update the count</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<button id="add" class="btn-primary">Push the epic Button</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<button id="reset" class="btn-danger">Reset Count</button>
+				</div>
+			</div>	
+		</div>
+	</body>
+</html>

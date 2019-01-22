@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<title>New Mongoose</title>
+	</head>
+	<body>
+		<form action="/mongooses/edit/<%= mongoose.id%>" method = "post">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<h1 class="display-4 text-center">Edit <%= mongoose.name%></h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+						<p class="text-center d-inline-block">Name:</p>
+						<input class="d-inline-block" type="text" name="name">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+						<p class="text-center d-inline-block">Age:</p>
+						<input class="d-inline-block" type="text" name="age">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+						<input type="submit" name="sub" value="Create!">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+					<div class="col">
+					</div>
+				</div>
+			</div>
+		</form>
+		<a href="/">Go Back</a>
+	</body>
+</html>

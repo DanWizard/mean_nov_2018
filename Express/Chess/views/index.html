@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="index.css">
+		<title>Chess Game</title>
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1 class= " display-1 text-monospace text-center">Chess</h1>
+				</div>
+			</div>
+		</div>
+		
+		<div id="settings" class="row">
+			<div class="col">
+				<h2 class=" display-4 text-monospace float-right mr-5">Settings</h2>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col mr-5">
+				<form>
+					<label class="radio-inline float-right">
+						<input type="radio" name="optradio" value="yes" checked>Yes
+					</label>
+					<label class="radio-inline float-right mr-5">
+						<input type="radio" name="optradio" value="no" checked>No
+					</label>
+					<h2 id="clock_label " class="float-right text-monospace  d-inline">Blitz:</h2>
+					
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<button id="button" class="btn-dark float-right mt-3 mr-5">Start Game</button>
+			</div>
+		</div>
+		<div id='board_size' class=" mt-5 row">
+			<div class="col text-center">
+				<div id="real_board"></div>
+				<h2 id="clock_label " class="text-center text-monospace  d-inline">Timer:</h2>
+				<p class='text-center text-monospace d-inline' id="clock">10:00</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="FrontEnd_PeiceMove.js"></script>

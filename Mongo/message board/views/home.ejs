@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<title>Home</title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h1 class="border border-dark border-top-0 border-right-0 border-left-0">The Dojo Message Board</h1>
+				</div>
+			</div>
+			<!-- tip to easily see objects printed in full instead of [object Object] -->
+			<%- JSON.stringify(messages) %> 
+			<!-- based on the structure of your messages, determine how to display them -->
+			<% if(messages.registration) { %>
+			     <% for (var x of messages.registration) { %>
+			      <h3><%= x %></h3>
+			     <% } %>
+			 <% } %>
+			<form action="/" method="post">
+				<div class="row">
+					<div class="col">
+						<p class="d-inline-block ">Name:</p>
+						<input type="text" name="name">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<p class="d-inline-block">Message:</p>
+						<input type="text" name="message">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<input type="submit" name="submit">
+					</div>
+				</div>
+			</form>
+			<% for (var i of messages) { %>
+			<div class="row">
+				<div class="col">
+					<p class="text-center">Name: <%= i.user.name %></p>
+					<p class="text-center">Message: <%= i.content %></p>
+				</div>
+			</div>
+			<% } %>
+		</div>
+
+	</body>
+</html>
